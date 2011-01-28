@@ -1,0 +1,180 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="da" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{% block title%}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}" />
+  <meta name="author" content="Tove Seest" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  <meta name="google-site-verification" content="N-0Fetpb_icyAIVZlRs_KUo4Js32gYRarar6VVWtHF8" />
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="/css/style.css?v=1" />
+  <link rel="stylesheet" href="/css/960.css?v=1" />
+  <link rel="stylesheet" href="/css/custom.css?v=1" />
+  <link rel="author" type="text/plain" href="http://supersundt.dk/humans.txt" />
+  <script src="/js/modernizr-1.5.min.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="container_12">
+      <header id="header">
+        <div class="grid_8" >
+            <h1>
+              <a href="">
+                <img src="/img/logo_small.gif" width="50" alt="" />Super Sundt
+              </a>
+            </h1>
+        </div> 
+        <div class="grid_4 headerright">
+          <form id="search-form" action="/soeg/" method="get">
+            <p>
+              <input type="hidden" name="cref" value="http://{{config.host}}/cse.xml" />
+              <input type="hidden" name="cof" value="FORID:11" />
+              <input type="hidden" name="ie" value="UTF-8" />
+              <input type="search" placeholder="Søg her og tryk enter" name="q" id="searchbox" /> 
+            </p>
+          </form>
+          <div id="navicons"> 
+            <a href="http://www.facebook.com/pages/Super-sundt/158978097455701" 
+               target="_blank">
+              <img class="navicon" src="/img/facebook_icon.png" title="Facebook" alt="Facebook" />
+            </a> 
+            <!-- <a href="http://twitter.com/{your profile}" target="_blank"> -->
+            <!--   <img class="navicon" src="/img/twitter_icon.png" title="Twitter" alt="Twitter" /> -->
+            <!-- </a> -->
+          </div> 
+        </div> 
+      </header>
+
+      <nav id="navbar" class="grid_12">
+        <ul class="menu"> 
+            <li>
+              <a href="/">Forside</a>
+            </li> 
+            <li>
+              <a href="/profil/" title="About">Profil og Vision</a>
+            </li> 
+            <li>
+              <a href="/produkter/" title="Produkter">Produkter</a> 
+              <ul>
+	            <li><a href="/elitesportspakken/" title="Elitesportspakken">Elitesportspakken</a></li>
+	            <li><a href="/foredrag/" title="Foredrag">Foredrag</a></li>
+                <li><a href="/kostraadgivning/" title="Privat kosterådgivning">Privat kosterådgivning</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" title="Samarbejdspartnere">Samarbejdspartnere</a>
+            </li>
+            <li><a href="/kontakt/" title="Kontakt">Kontakt</a></li> 
+        </ul> 
+      </nav>
+
+      <div id="content">
+      {% block content %}{% endblock %}
+      </div>
+
+      <footer id="footerbg" class="footherbg grid_12"> 
+    	<div class="grid_11 alpha"> 
+          <div class="footertop"> 
+            <div class="vcard">
+              &copy; 2011 &middot;
+              <span class="fn org">Super Sundt</span> 
+              <span class="adr" style="display:none"> 
+                <span class="street-address"></span>
+                <span class="postal-code">8000</span> 
+                <span class="locality">Aarhus</span>
+                <span class="country-name">DK</span>
+              </span>   
+              &middot; CVR: 33206240
+              &middot; Telefon: <span class="tel">+45 61 79 99 01</span>
+              &middot; Email:   
+              <span class="email">
+                <span class="domain">supersundt.dk</span>
+                <span class="user">toveseest</span>
+              </span> 
+              <span class="geo" style="display:none">
+                <span class="latitude">
+                  <span class="value-title" title="56.15812278756678"></span>
+                </span>
+                <span class="longitude">
+                  <span class="value-title" title="10.199174880981445"></span>
+                </span>
+              </span>
+            </div>
+          </div> 
+          
+          <div class="footerbottom"></div> 
+        </div> 
+          
+        <div class="grid_1 omega"> 
+            <img src="/img/logo_neg_small.gif" style="float:right" width="30" alt="Super Sundt" />
+    	</div> 
+      </footer> 
+
+    </div> 
+  </div> <!--! end of #container -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="/js/jquery-1.4.2.min.js"><\/script>')</script>
+
+  <script src="/js/superfish.js"></script>
+  <script src="/js/jquery.faded.js"></script>
+
+  <!--[if lt IE 7 ]>
+    <script src="/js/dd_belatedpng.js?"></script>
+    <script>
+      DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images
+    </script>
+  <![endif]-->
+
+  <script src="/js/util.js"></script>
+  <script src="/js/jquery.html5form-1.2.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() { 
+      $('.email').email();
+      $('ul.menu').superfish(); 
+      $('#gallery').faded({
+         speed: 300,
+         crossfade: true,
+         bigtarget: true,
+         autopagination: true,
+         autoheight: true, 
+         autoplay: 10000
+      });
+//       $('.textbanner').faded({
+//   speed: 300,
+//   crossfade: false,
+//   autopagination: false,
+//   autoheight: true, 
+//   autoplay: 5000
+//});
+
+    $('a[href=' + window.location.pathname + ']').parent().addClass('current_page_item');
+      $('#search-form').html5form({colorOn:'#FFFFFF',async:false});
+      $('#contact-form').html5form({
+         responseDiv : '#error-messages', 
+         messages:'en',
+         emptyMessage : 'Alle felter skal udfyldes.',
+         emailMessage : 'Emailadresse er ikke korrekt udfyldt.',
+         nameMessage : 'Du skal huske at angive navn.',
+         subjectMessage: 'Du skal huske at angive et emne',
+         messageMessge: 'Du skal skrive noget.',
+         allBrowsers: true,
+         async:false
+    });
+    }); 
+  </script>
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search&amp;lang=da&amp;hl=da"></script>
+  <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19917424-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type ='text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' :'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();
+  </script>
+</body>
+</html>

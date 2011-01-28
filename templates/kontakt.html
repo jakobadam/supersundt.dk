@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Super Sundt | Kontakt{% endblock%}
+{% block description %}{% endblock%}
+{% block content %}
+  <style>
+  span.required {
+  color: red;
+  vertical-align: super;
+  }
+  </style>
+  <div class="grid_4">
+    <h2>Kontakt</h2>
+    <img src="/img/seest-profil.jpeg" alt="" width="300"/>
+  </div>
+
+  <div class="grid_8"> 
+    <h3>{{message}}</h3>
+    <form id="contact-form" action="/kontakt/" method="post">
+		<label for="name">Navn<span class="required">*</span></label>
+        <div>
+          <input id="name" type="text" name="name" value="" required />
+        </div>
+		<label for="email">Email<span class="required">*</span></label>
+        <div>
+          <input id="email" type="email" name="email" value="" required />
+        </div>
+        <label for="subject">Emne<span class="required">*</span></label>
+        <div>
+          <input id="subject" type="text" name="subject" required value="" />
+		</div>
+        <label for="message">Besked<span class="required">*</span></label>
+        <div>
+          <textarea id="message" name="message" required="required" cols="70" rows="10"></textarea>
+		</div>
+        <input type="submit" value="Send" style="float:left;margin-right:15px;width:40px"/>
+        <div id="error-messages" ></div>
+	</form>       
+  </div>
+{% endblock %}
