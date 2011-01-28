@@ -1,0 +1,14 @@
+/* TEAM */
+	Health Guru and Text Author:Tove Seest
+	Contact: http://supersundt.dk/kontakt
+	From:Aarhus, Denmark
+
+    Developer: Jakob Aarøe Dam	
+	Twitter: @jakobadam
+	From: Aarhus, Denmark
+
+/* SITE */
+	Language:Danish
+	Doctype:HTML5 with CSS3
+	Tools:Google App Engine
+	IDE:Emacs

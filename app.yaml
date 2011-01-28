@@ -1,0 +1,55 @@
+application: supersundt
+version: test
+runtime: python
+api_version: 1
+
+default_expiration: '365d'
+
+derived_file_type:
+- python_precompiled
+
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co].*
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?(main_test|loader|remote_shell|testutil|urlfetch_test_stub|feed_diff_test)\.py
+- ^(.*/)?feed_diff_testdata
+- ^(.*/)?django/.*
+
+handlers:
+- url: /img
+  static_dir: img
+
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /favicon.ico
+  static_files: static/favicon.ico
+  upload: static/favicon.ico
+
+- url: /robots.txt
+  static_files: static/robots.txt
+  upload: static/robots.txt
+
+- url: /humans.txt
+  static_files: static/humans.txt
+  upload: static/humans.txt
+
+- url: /cse.xml
+  static_files: static/cse.xml
+  upload: static/cse.xml
+
+- url: /.*
+  script: main.py
+
+
